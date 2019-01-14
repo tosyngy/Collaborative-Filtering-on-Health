@@ -1,0 +1,437 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Aug 10, 2015, 12:00:08 AM
+    Author     : ayoade
+*/
+@font-face {
+    font-family: 'robotolight';
+    src: url("../fonts/Roboto-Light-webfont.eot");
+    src: url("../fonts/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/Roboto-Light-webfont.woff") format("woff"),url("../fonts/Roboto-Light-webfont.ttf") format("truetype"),url("../fonts/Roboto-Light-webfont.svg#robotolight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'robotoregular';src:url("../fonts/Roboto-Regular-webfont.eot");src:url("../fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/Roboto-Regular-webfont.woff") format("woff"),url("../fonts/Roboto-Regular-webfont.ttf") format("truetype"),url("../fonts/Roboto-Regular-webfont.svg#robotoregular") format("svg");font-weight:normal;font-style:normal;
+}
+
+@font-face {
+    font-family:'robotobold';src:url("../fonts/Roboto-Bold-webfont.eot");src:url("../fonts/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/Roboto-Bold-webfont.woff") format("woff"),url("../fonts/Roboto-Bold-webfont.ttf") format("truetype"),url("../fonts/Roboto-Bold-webfont.svg#robotobold") format("svg");font-weight:normal;font-style:normal;
+}
+*{
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+body{
+    height: 100%;
+    font-family: robotoregular;
+    /*background: url(../img/intro-bg.jpg)no-repeat;*/
+    background: url(whatdodoctorsdo.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.panel-body{
+
+}
+.symtoms_list{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 350px;
+    color: rgb(136, 136, 136);
+    padding: 3px;
+}
+.ad{
+    height: 200px;
+    background-color: rgb(199, 199, 199);
+}
+.front-img{
+    width: 100%;
+    /* margin-left: -116px; */
+    height: 100%;
+    margin-top: 10px;
+    background-color: white;
+    z-index: 0;
+    /* margin-top: -15px; */
+}
+.zoom{
+    height: 300px;
+    border: 1px #C7C7C7 solid;
+    text-align: center;
+    padding-top: 30px;
+    background-color: #fff;
+    overflow: auto;
+    transition: linear;
+    transition-duration: .5s;
+}
+.zum{
+    position: relative;
+    top: 40px;
+    color: #fff;
+    /*left: 10px;*/
+    height: 40px;
+    background-color: #c0c00c;
+    transition: linear;
+    transition-duration: .5s;
+}
+.to-select{
+    height: 263px;
+    overflow-y: auto;
+}
+.init{
+    display: block;
+}
+.q, .pda-in{
+    width: 75%;
+    margin: 100px auto 0px auto;
+}
+.sym-head{
+    padding: 10px;
+    background-color: rgb(255, 0, 57);
+    width: 50%;
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.qt{
+    height: 400px;
+      background: rgba(255,255,255, .5);
+    width: 100%;
+}
+.sym-sub{
+    padding: 20px 10px 20px 0px;
+    font-size: 25px;
+    color: rgb(39, 42, 42);
+    font-family: robotoregular;
+    border-bottom: 1px #ddd solid;
+}
+.list-item, .advice{
+    height: 100%;
+    text-transform: capitalize;
+    font-size: 20px;
+    overflow: auto;
+    padding: 0px 40px;
+    color: rgb(40, 38, 39);
+    font-family: robotolight;
+}
+.pda{
+    /*display: none;*/
+}
+.nt-pv{
+    height: 70px;
+}
+.blue, .red{
+    padding: 6px 9px! important;
+    border-radius: 50%! important;
+    margin-right: 5px;
+}
+.red{
+    background-color: rgb(255, 0, 57);
+}
+.que{
+    display: none;
+}
+.suggest-doc{
+    margin-top: 20px;
+    margin: auto;
+    text-align: center;
+}
+.rec{
+    color: rgb(255, 0, 57);
+    font-size: 20px;
+    font-family: robotobold;
+    margin: auto;
+    text-align: center;
+}
+#img-head{
+    position: relative;
+    left: 37%;
+    height: 77px;
+    top: -589px;
+    width: 15.9%;
+    opacity: 0;
+    border-radius: 179px 136px 120px 117px;
+    -webkit-transition:opacity 0.5s linear 0s;
+    -moz-transition: opacity 0.5s linear 0s;
+    -o-transition:opacity 0.5s linear 0s;
+    -ms-transition: opacity 0.5s linear 0s;
+    transition:opacity 0.5s linear 0s;
+}
+#img-neck{
+    position: relative;
+    top: -551px;
+    left: 21.5%;
+    height: 29px;
+    width: 12.6%;
+    opacity:0;
+    -webkit-transition:opacity 0.5s linear 0s;
+    -moz-transition: opacity 0.5s linear 0s;
+    -o-transition: opacity 0.5s linear 0s;
+    -ms-transition:opacity 0.5s linear 0s;
+    transition: opacity 0.5s linear 0s;
+}
+#img-shoulder{
+    position: relative;
+    height: 4%;
+    width: 11%;
+    top: -534px;
+    left: 21%;
+    opacity: 0;
+    border-radius: 0px 198px 0px 190px;
+    -webkit-transition:opacity 0.5s linear 0s;
+    -moz-transition: opacity 0.5s linear 0s;
+    -o-transition:opacity 0.5s linear 0s;
+    -ms-transition: opacity 0.5s linear 0s;
+    transition:opacity 0.5s linear 0s;
+}
+#img-chest{
+    position: relative;
+    height: 83px;
+    width: 31.2%;
+    top: -501px;
+    left: -13%;
+    opacity: 0;
+    border-radius: 10px;
+    -webkit-transition: opacity 0.5s linear 0s;
+    -moz-transition:opacity 0.5s linear 0s;
+    -o-transition:opacity 0.5s linear 0s;
+    -ms-transition:opacity 0.5s linear 0s;
+    transition:opacity 0.5s linear 0s;
+}
+#img-abdomen{
+    position: relative;
+    height: 110px;
+    width: 26%;
+    top: -559px;
+    left: 32%;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s linear 0s;
+    -moz-transition:opacity 0.5s linear 0s;
+    -o-transition:opacity 0.5s linear 0s;
+    -ms-transition:opacity 0.5s linear 0s;
+    transition:opacity 0.5s linear 0s;
+}
+#img-upperarm,#img-upperarm-right{
+    position: relative;
+    left: -7%;
+    top: -607px;
+    width: 13%;
+    height: 103px;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 0.5s linear 0s;
+    -moz-transition:opacity 0.5s linear 0s;
+    -o-transition:opacity 0.5s linear 0s;
+    -ms-transition:opacity 0.5s linear 0s;
+    transition:opacity 0.5s linear 0s;
+}
+#img-upperarm-right{
+    left: -31%;
+    transform: rotateY(180deg);
+    top: -564px;
+}
+#img-hand,#img-hand-right{
+    position: relative;
+    left: -40.5%;
+    height: 137px;
+    top: -509px;
+    width: 25%;
+    opacity:0;
+    -webkit-transition: opacity 0.5s linear 0s;
+    -moz-transition:opacity 0.5s linear 0s;
+    -o-transition:opacity 0.5s linear 0s;
+    -ms-transition:opacity 0.5s linear 0s;
+    transition:opacity 0.5s linear 0s;
+}
+#img-hand-right{
+    left: -12%;
+    transform: rotateY(180deg);
+    top: -671px;
+}
+#img-upperleg,#img-upperleg-right{
+    position: relative;
+    left: -38.5%;
+    height: 194px;
+    top: -432px;
+    width: 17%;
+    z-index: 1;
+    opacity:0;
+    -webkit-transition: opacity 0.5s linear 0s;
+    -moz-transition:opacity 0.5s linear 0s;
+    -o-transition:opacity 0.5s linear 0s;
+    -ms-transition:opacity 0.5s linear 0s;
+    transition:opacity 0.5s linear 0s;
+}
+#img-upperleg-right{
+    left: -14.5%;
+    transform: rotateY(180deg);
+    top: -622px;
+}
+#img-leg,#img-leg-right{
+    position: relative;
+    left: 26.5%;
+    height: 183px;
+    top: -446px;
+    width: 12%;
+    opacity:0;
+    -webkit-transition: opacity 0.5s linear 0s;
+    -moz-transition:opacity 0.5s linear 0s;
+    -o-transition:opacity 0.5s linear 0s;
+    -ms-transition:opacity 0.5s linear 0s;
+    transition:opacity 0.5s linear 0s;
+}
+#img-leg-right{
+    left: 4.5%;
+    transform: rotateY(180deg);
+    top: -445px;
+}
+#img-head:hover,#img-neck:hover,#img-shoulder:hover,#img-chest:hover,#img-abdomen:hover,#img-upperleg-right:hover,
+#img-upperarm:hover,#img-hand:hover,#img-leg:hover,#img-upperleg:hover,#img-upperarm-right:hover,#img-hand-right:hover,#img-leg-right:hover{
+    opacity: 0.5;
+}
+.img-switch > a{
+    cursor: pointer;
+}
+.parts{
+    display: none;
+}
+.mg{
+    width: 47%;
+    height: 230px;
+}
+ul .ul1{
+
+}
+.part-head{
+    cursor: pointer;
+    position: absolute;
+    height: 12%;
+    width: 36%;
+    opacity: 0.3;
+    top: 10%;
+    left: 32%;
+    border-radius: 134px 136px 0px 0px;
+    -webkit-transition: background-color 0.5s linear 0s;
+    -moz-transition: background-color 0.5s linear 0s;
+    -o-transition: background-color 0.5s linear 0s;
+    -ms-transition: background-color 0.5s linear 0s;
+    transition: background-color 0.5s linear 0s;
+}
+.part-head:hover{
+    background-color: rgb(29, 163, 158);
+}
+.dis{
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    border-bottom: 2px #E3E3E0 solid;
+    padding-left: 20px;
+    -webkit-transition: background-color 0.5s linear 0s;
+    -moz-transition: background-color 0.5s linear 0s;
+    -o-transition: background-color 0.5s linear 0s;
+    -ms-transition: background-color 0.5s linear 0s;
+    transition: background-color 0.5s linear 0s;
+}
+.dis:hover{
+    background-color:rgb(242, 165, 159);
+}
+.dis a{
+    color: #64221D! important;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.symptoms{
+    padding: 0px 20px 0px 15px;
+    text-transform: capitalize;
+    font-size: 13px;
+    color: rgb(74, 74, 74);
+}
+.cl{
+    font-weight: bold;
+    cursor: pointer;
+}
+.opt_div{margin-left: 30px;margin-bottom: 10px;margin-top: -14px;  position:relative; z-index: 5;font-size: 18px;}
+.slide{display: none;}
+.alpha {
+    padding-top: 30px;
+    list-style: none;
+    display: block;
+    overflow: hidden;
+      background: rgba(255,255,255, .1);
+    border-radius: 0px 0px 8px 8px;
+}
+ol.alpha li {
+    margin-bottom: 6px;
+    margin-right: 6px;
+    float: left;
+}
+.alpha li a {
+    text-decoration: none;
+    color: rgb(67, 67, 124);
+    display: block;
+    font-size: 20px;
+    float: left;
+    min-width: 40px;
+    text-align: center;
+    padding: 5px 0px;
+    background: #fff;
+    border: 1px solid #e3e3e0;
+    -webkit-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+    -moz-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+    -o-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+    -ms-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+    transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+ol.alpha li a:hover {
+    color: #E9EAED;
+    background: #777777;
+    border: 1px solid #1c94c4;
+}
+.alpha-switch{
+    /*display: none;*/
+    margin-top: 30px;
+}
+#image, #letter{
+    background-color: #205d76;
+    border: 1px #0096A9 solid;
+}
+#p1{
+    background-color: #205D76;
+    border-color: #205D76;
+}
+#p2{
+    background-color: #F44336;
+    border-color: #F44336;
+}
+#p3{
+    background-color: #009688;
+    border-color: #009688;
+}
+.cont{
+    background-color: #009688! important;
+    border-color: #009688! important;
+}
+.list-result{
+    padding: 10px 20px 0px 20px;
+    overflow: auto;
+}
+.pos{
+    font-size: 20px;
+    width: 35%;
+    background-color: #009688;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.details{
+    font-size: 12px;
+}
+.panel{
+    background: rgba(255,255,255, .5);
+}
